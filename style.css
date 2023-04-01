@@ -1,0 +1,75 @@
+/* Basic Styles */
+
+body {
+    background-color: #0F4C81;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Container Styles */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Styles */
+
+label {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Button Styles */
+
+button {
+    background-color: #008CBA;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #00587A;
+}
+
+/* Result Styles */
+
+.result {
+    margin-top: 50px;
+}
+
+.result p {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result p.passed {
+    color: #4CAF50;
+}
+
+.result p.failed {
+    color: #F44336;
+}
