@@ -1,24 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller</title>
+	<meta charset="UTF-8">
+	<title>Mi Página Web Futurista</title>
+	<style>
+		/* Estilos para el fondo azul y diseño futurista */
+		body {
+			background-color: #0F4C81;
+			color: #FFFFFF;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		label {
+			margin-top: 20px;
+		}
+
+		input[type="text"],
+		input[type="number"] {
+			width: 100%;
+			padding: 10px;
+			margin-top: 10px;
+			border-radius: 5px;
+			border: none;
+		}
+
+		button {
+			background-color: #008CBA;
+			color: #FFFFFF;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			margin-top: 20px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+
+		button:hover {
+			background-color: #00587A;
+		}
+
+		/* Estilos para los resultados de cada requerimiento */
+		.result {
+			margin-top: 50px;
+		}
+
+		.result p {
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.result p.passed {
+			color: #4CAF50;
+		}
+
+		.result p.failed {
+			color: #F44336;
+		}
+	</style>
 </head>
+
 <body>
-    <form>
-        <label for="texto">Ingrese un texto:</label>
-        <input type="text" id="texto" name="texto">
-        <br>
-        <button type="submit">Contar caracteres</button>
-        <br>
-        <div id="resultado"></div>
-      </form>
-      <p id="resultado"></p>
-     <script src="script.js"></script>
-      
-      
-    
-</body>
-</html>
+	<h1>Mi Página Web Futurista</h1>
+
+	<div class="container">
+		<!-- Requerimiento 1: Contar caracteres -->
+		<label for="text">Ingrese un texto para contar sus caracteres:</label>
+		<input type="text" id="text">
+		<button id="count-btn">Contar</button>
+		<div id="count-result" class="result"></div>
+
+		<!-- Requerimiento 2: Identificar tipo de dato -->
+		<label for="value">Ingrese un valor para identificar su tipo de dato:</label>
+		<input type="text" id="value">
+		<button id="type-btn">Identificar</button>
+		<div id="type-result" class="result"></div>
+
+		<!-- Requerimiento 3: Identificar si es mayor de edad -->
+		<label for="name">Ingrese su nombre:</label>
+		<input type="text" id="name">
+		<label for="age">Ingrese su edad:</label>
+		<input type="number" id="age">
+		<button id="age-btn">Verificar</button>
+		<div id="age-result" class="result"></div>
+
+		<!-- Requerimiento 4: Verificar si pasa o pierde una materia -->
+		<label for="student">Ingrese el nombre del estudiante:</label>
+		<input type="text" id="student">
+		<label for="subject">Ingrese el nombre de la materia:</label>
+		<input type="text" id="subject">
+		<label for="grade1">Ingrese la nota 1: </label> 
+		<input type="number" id="grade1" min="0" max=" 5"> 
+		<etiqueta para="grado2"> Ingrese la nota 2: </etiqueta> 
+		<input type="number" id="grado2" min="0" max="5"> 
+		<etiqueta para="grado3" >Ingrese la nota 3: </label> 
+		<input type="number" id="grade3" min="0" max="5"> 
+		<button id="check-grade-btn"> Calcular promedio </button>
+		
+		<div id="resultado" clase="resultado"></div>
+		
+		
+		
+
+
+			<h1>Identificar números pares e impares</h1>
+			<label for="numero">Ingrese un número entero positivo:</label>
+			<input type="number" id="numero">
+			<button onclick="identificarParImpar()">Identificar</button>
+			<p id="resultado"></p>
+			<script src="script.js"></script>
+
+			<h1>Buscar contenido en un texto</h1>
+			<label for="texto">Ingrese un texto:</label>
+			<textarea id="texto"></textarea>
+			<label for="busqueda">Ingrese el texto a buscar:</label>
+			<input type="text" id="busqueda">
+			<button onclick="buscarTexto()">Buscar</button>
+			<p id="resultado"></p>
+			<script src="script.js"></script>
+
+			<h1>Identificar si un número es divisible por otro</h1>
+			<label for="numero1">Ingrese el primer número entero positivo:</label>
+			<input type="number" id="numero1">
+			<label for="numero2">Ingrese el segundo número entero positivo:</label>
+			<input type="number" id="numero2">
+			<button onclick="identificarDivisibilidad()">Identificar</button>
+			<p id="resultado"></p>
+			<script src="script.js"></script>
+
+			<h1>Identificar números pares e impares en una lista</h1>
+			<label for="lista">Ingrese una lista de números enteros separados por coma:</label>
+			<input type="text" id="lista">
+			<button onclick="identificarParesImpares()">Identificar</button>
+			<p id="resultado"></p>
+			<script src="script.js"></script>
